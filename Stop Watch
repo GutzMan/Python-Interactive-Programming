@@ -1,0 +1,93 @@
+# "Stopwatch: The Game"
+import simplegui
+# define global variables
+tenths_of_seconds = 0
+total_stops = 0 
+correct_stops = 0 
+running = False
+
+# define helper function format that converts time
+# in tenths of seconds into formatted string A:BC.D
+def format(t):
+    # t is in tenths of seconds so to convert to seconds we use t // 10
+    # and to convert to minutes we use t // 60
+    minutes = t // 600
+    # to get decaseconds we use time in seconds % 60 to get the remaining 
+    # number of seconds and divide that number by 10 to get the first digit
+    decaseconds = ((t // 10) % 60) / 10
+    # to get the last remaining digit of seconds we use % 10  
+    seconds = ((t // 10) % 60 )% 10
+    # t is already in tenths of seconds so to get the last digit we just 
+    # use % 10 
+    tenths_of_seconds = t % 10
+    return str(minutes) + ':' + str(decaseconds) + str(seconds) + '.' + str(tenths_of_seconds)
+
+# define event handlers for buttons; "Start", "Stop", "Reset"
+def start():
+    global running
+    timer.start()
+    running = True
+    
+def stop():
+    global total_stops
+    global running
+    global correct_stops
+    if running == True:
+        total_stops += 1
+    if tenths_of_seconds % 10 == 0 and running == True:
+        correct_stops += 1
+    timer.stop()
+    running = False
+    
+def reset():
+    timer.stop()
+    global tenths_of_seconds
+    global total_stops
+    global correct_stops
+    global running
+    running = False
+    correct_stops = 0
+    total_stops = 0
+    tenths_of_seconds = 0
+
+
+# define event handler for timer with 0.1 sec interval
+def add_tenths_of_seconds():
+    global tenths_of_seconds
+    tenths_of_seconds += 1
+    return tenths_of_seconds
+
+# define draw handler
+def current_time(canvas):
+    # watch outer edge
+    canvas.draw_circle([(371 + 250) / 2, (255 + 215) / 2], 150, 12, 'Gray', 'Blue')
+    # watch number background
+    canvas.draw_polygon([[250,215], [371, 215], [371, 255], [250, 255]], 5, 'Black', 'Grey')
+    # watch button
+    canvas.draw_line((315, 55), (315, 80), 20, 'Grey')
+    canvas.draw_line((315, 60), (315, 80), 12, 'White')
+    #watch face buttons
+    canvas.draw_circle([345, 320], 10, 4, 'Black', 'White')
+    canvas.draw_circle([315, 320], 10, 4, 'Black', 'White')
+    canvas.draw_circle([285, 320], 10, 4, 'Black', 'White')
+    canvas.draw_text(format(tenths_of_seconds), (250, 250), 48, 'White')
+    canvas.draw_text(str(correct_stops) + '/' + str(total_stops), (445, 20), 24, 'White')
+    
+    
+    
+# create frame
+frame = simplegui.create_frame('Game', 500, 500)
+
+# register event handlers
+timer = simplegui.create_timer(100,  add_tenths_of_seconds)
+frame.set_draw_handler(current_time)
+
+start = frame.add_button('Start', start)
+stop = frame.add_button('Stop', stop)
+reset = frame.add_button('Reset', reset)
+# frame.set_draw_handler(reflex_test)
+
+# start frame
+frame.start()
+
+# Please remember to review the grading rubric

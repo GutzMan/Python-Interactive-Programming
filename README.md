@@ -16,6 +16,8 @@ you can see you score on the top right if the interface.
 
 "Pong" http://www.codeskulptor.org/#user40_jEPpJVbYsAx0WBD.py
 
+The left paddle is controlled using the “W” and “S” keys and the right paddle is controlled using the up and down arrows.
+
 "Memory" http://www.codeskulptor.org/#user40_DinzbImtUl7gh7v.py
 
 "Black Jack" http://www.codeskulptor.org/#user40_xX8E7iqOuxSUqLl.py

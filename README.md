@@ -8,7 +8,11 @@ They make use of a library called simpleGUI.
 You can either view the code here or by simply following the links below and clicking the play button in the upper 
 left corner of the screen.
 
-"Stop Watch" http://www.codeskulptor.org/#user40_jEPpJVbYsAx0WBD.py
+"Stopwatch" http://www.codeskulptor.org/#user40_jEPpJVbYsAx0WBD.py
+
+Buttons for your stop watch can be found on the left of the interface. 
+The object of the game is to stop the watch on an a whole second (1.0, 2.0, 11.0)
+you can see you score on the top right if the interface.
 
 "Pong" http://www.codeskulptor.org/#user40_jEPpJVbYsAx0WBD.py
 

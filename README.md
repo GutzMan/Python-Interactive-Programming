@@ -12,7 +12,7 @@ left corner of the screen.
 
 Buttons for your stop watch can be found on the left of the interface. 
 The object of the game is to stop the watch on a whole second (1.0, 2.0, 11.0)
-you can see you score on the top right if the interface.
+you can see your score on the top right of the interface.
 
 "Pong" http://www.codeskulptor.org/#user40_jEPpJVbYsAx0WBD.py
 

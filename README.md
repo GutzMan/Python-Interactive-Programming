@@ -1,9 +1,9 @@
 # Python-Interactive-Programming
 Games Coded in Python
 
-These are projects were completed for a Rice University class, Introduction to Interactive Programming in Python.
+These projects were completed for a Rice University class, Introduction to Interactive Programming in Python.
 
-They make use of a library called simpleGUI. 
+They make use of a library called simplegui. 
 
 You can either view the code here or by simply following the links below and clicking the play button in the upper 
 left corner of the screen.

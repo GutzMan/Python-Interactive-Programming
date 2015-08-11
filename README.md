@@ -2,6 +2,7 @@
 Games Coded in Python
 
 These projects were completed for a Rice University class, Introduction to Interactive Programming in Python.
+https://www.coursera.org/specialization/fundamentalscomputing2/37
 
 They make use of a library called simplegui. 
 

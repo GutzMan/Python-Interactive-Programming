@@ -21,7 +21,7 @@ The left paddle is controlled using the “W” and “S” keys and the right p
 
 "Memory" http://www.codeskulptor.org/#user40_DinzbImtUl7gh7v.py
 
-"Black Jack" http://www.codeskulptor.org/#user40_xX8E7iqOuxSUqLl.py
+"Blackjack" http://www.codeskulptor.org/#user40_xX8E7iqOuxSUqLl.py
 
 "Asteroids" http://www.codeskulptor.org/#user40_3h8UcnqU21MtbNi.py
 
